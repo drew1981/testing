@@ -8,6 +8,7 @@ import pathlib
 
 window=tk.Tk()
 window.title("PDF a TESTO")
+window.geometry("500x50+500+400")
 
 def openfile():
     file=askopenfile(filetypes=[('PDF Files','*.pdf')])
