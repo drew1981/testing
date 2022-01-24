@@ -12,6 +12,7 @@ class TextEditor:
     self.root.title("DI LALLO'S TEXT EDITOR")
     # Window Geometry
     self.root.geometry("1200x700+200+150")
+    #self.root.config(bg="yellow")
     # Initializing filename
     self.filename = None
     # Declaring Title variable
@@ -25,13 +26,13 @@ class TextEditor:
     # Calling Settitle Function
     self.settitle()
     # Creating Statusbar
-    self.statusbar = Label(self.root,textvariable=self.status,font=("Calibri",15),bd=2, bg="#2e86c1", relief=GROOVE)
+    self.statusbar = Label(self.root,textvariable=self.status,font=("Calibri",14),bd=2, bg="#2e86c1", relief=GROOVE)
     # Packing status bar to root window
     self.statusbar.pack(side=BOTTOM,fill=BOTH)
     # Initializing Status
     self.status.set("BENVENUTO")
     # Creating Menubar
-    self.menubar = Menu(self.root,font=("Calibri",15),activebackground="#328bbb", bg="#2e86c1")
+    self.menubar = Menu(self.root,font=("Calibri",14),activebackground="#328bbb", bg="#2e86c1")
     # Configuring menubar on root window
     self.root.config(menu=self.menubar)
     # Creating File Menu

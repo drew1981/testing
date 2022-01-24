@@ -1,0 +1,9 @@
+ impostare in modo ricorsivo tutte le cartelle / i file correnti e quelli futuri creati in una directory per impostazione predefinita hanno 775 
+ autorizzazioni e appartengono rispettivamente al proprietario / gruppo nessuno / amministratore
+
+
+COMANDO
+
+
+sudo setfacl -Rm g:groupnamehere:rwx /base/path/members/
+

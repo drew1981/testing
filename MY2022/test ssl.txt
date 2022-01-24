@@ -1,0 +1,16 @@
+Comando OpenSSL per verificare un certificato
+
+
+
+openssl s_client -connect ip:port -prexit
+
+
+openssl s_client -connect ip:port -prexit -ssl3
+
+
+openssl s_client -connect ip:port -prexit -tls1
+
+
+
+
+

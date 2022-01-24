@@ -1,0 +1,62 @@
+-----------------Modulo di comando------------------------
+
+
+- name: Executing a command using the command module
+  command: cat helloworld.txt
+---
+ - name: Check the remote host uptime
+    hosts: servers
+    tasks:
+      - name: Execute the Uptime command over Command module
+        register: uptimeoutput -------PER SALVARE OUTPUT
+        command: "uptime"
+
+- debug:
+          var: uptimeoutput.stdout_lines
+
+
+
+
+----------------MODULO YUM, DNF, APT---------------------
+
+
+---
+ - name: Install httpd
+
+   hosts: all
+   tasks:
+    yum:	 
+name: httpd
+     state: Installed
+
+
+
+----------------Modulo di servizio----------------------
+
+
+Il modulo di servizio consente agli amministratori di sistema 
+di avviare, arrestare, aggiornare, aggiornare e ricaricare 
+i servizi sul sistema.
+
+---
+- name: Stop service httpd
+  service:
+    name: httpd
+    state: stopped
+---
+- name: Restart network service for interface eth0
+  service:
+    name: network
+    state: restarted
+    args: enp2s0
+
+--------------------Modulo di copia-------------------
+
+---
+- name: Copy file with owner and permissions
+  copy:
+    src: /etc/files/tecmint.conf
+    dest: /srv/tecmint.conf
+    owner: tecmint
+    group: tecmint
+    mode: '0644'

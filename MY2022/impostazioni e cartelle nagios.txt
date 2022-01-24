@@ -1,0 +1,18 @@
+ cd /usr/local/nagios/libexec/
+
+
+cd /usr/local/nagios/etc/objects
+
+hosts.cfg
+
+services.cfg
+
+servicegroup.cfg
+
+commands.cfg
+
+resource.cfg
+
+timeperiods.cfg
+
+templates.cfg

@@ -1,0 +1,27 @@
+Scan a Single Target	nmap 192.168.0.1
+
+Scan Multiple Targets	nmap 192.168.0.1 192.168.0.2
+
+Scan a Range of Hosts	nmap 192.168.0.1-10
+
+Traceroute		nmap –traceroute 192.168.0.1
+
+Scan an Entire Subnet	nmap 192.168.0.1/24
+
+Send IP Packets			nmap –send-ip 192.168.0.1
+
+Scan Specific Ports		nmap -p 21-25,80,139,8080 192.168.1.1
+
+Scan All Ports			nmap -p ‘*’ 192.168.0.1
+
+Only Display Open Ports	 	nmap –open 192.168.0.1
+
+Trace Packets			nmap –packet-trace 192.168.0.1
+
+Operating System Detection	nmap -O 192.168.0.1
+
+DETECTION OF SERVICES  		nmap -sV localhost
+
+REMOTE HOST MALWARE INFECTION DETECTION nmap -p80 –script http-google-malware infectedsite.com
+
+

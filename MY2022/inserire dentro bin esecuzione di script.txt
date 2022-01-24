@@ -1,0 +1,10 @@
+per fare in modo che uno script personale possa essere
+eseguito da qualsiasi punto del sistema operativo:
+
+
+
+echo $PATH                                     ####per vedere quali indirizzi contengono gli eseguibili
+
+export PATH=home/andrea/bin:$PATH    ####per aggiungere la nuova path dove inserire lo script esempio su home/andrea/bin
+
+inserire lo script dentro la directory home/andrea/bin

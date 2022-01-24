@@ -1,0 +1,31 @@
+Aprire una porta del server 
+
+firewall-cmd --add-port=NUMERO_PORTA/tcp
+firewall-cmd --permanent --add-port=NUMERO_PORTA/tcp
+
+esempio 
+
+firewall-cmd --add-port=3306/tcp
+firewall-cmd --permanent --add-port=3306/tcp
+
+firewall-cmd --reload
+
+
+
+
+
+Per far sì che le porte dei servizi locali siano raggiungibili dai client 
+è necessario usare un comando simile al seguente:
+
+firewall-cmd --zone=public --add-port=21/tcp --permanent
+
+Se poi volessi aprire una porta, in questo caso sempre del database per un unico ip:
+
+firewall-cmd --permanent --zone=public 
+--add-rich-rule=' rule family="ipv4" 
+source address="1.1.1.1" port protocol="tcp" port="3306" accept'
+
+Bloccare completamente un indirizzo IP
+
+firewall-cmd --zone=public --add-rich-rule=
+"rule family=ipv4 source address=103.230.84.239 drop" --permanent

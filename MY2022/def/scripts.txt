@@ -1,0 +1,22 @@
+#!/bin/bash
+ 
+echo "Hello World"
+
+
+VARIABILI
+
+#!/bin/bash
+ 
+message="Hello World"
+echo $message
+
+
+
+The for syntax in Bash is: for VARIABLE in RANGE; do COMMAND done.
+
+#!/bin/bash
+ 
+for number in {1..100}
+do
+    echo $number
+done

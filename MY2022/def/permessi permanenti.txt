@@ -1,0 +1,1 @@
+setfacl -m utente:gruppo:rw /indirizzo/della/cartella/

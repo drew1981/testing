@@ -1,0 +1,2 @@
+## Untar files in Current Directory ##
+# tar -xvf
